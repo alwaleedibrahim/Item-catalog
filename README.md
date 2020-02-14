@@ -38,10 +38,10 @@ Visiting `http://localhost:8000` show all categories and latest items
 `http://localhost:8000/categories/JSON`
 
 ### Show items in a category
-`http://localhost:8000//category/<int:category_id>/items/JSON`
+`http://localhost:8000/category/<int:category_id>/items/JSON`
 
 ### Show one item
-`http://localhost:8000//category/<int:category_id>/items/<int:item_id>/JSON`
+`http://localhost:8000/category/<int:category_id>/items/<int:item_id>/JSON`
 
 ## License
 This code is licensed under [MIT license](LICENSE).
