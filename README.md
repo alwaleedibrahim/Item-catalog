@@ -29,6 +29,7 @@ Visiting `http://localhost:8000` show all categories and latest items
 ![edit item](edit_item.png)
 ### Login
 `http://localhost:8000/login`
+
 ![Google sign-in button](https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png)
 
 ### JSON endpoints
@@ -42,5 +43,5 @@ Visiting `http://localhost:8000` show all categories and latest items
 ### Show one item
 `http://localhost:8000//category/<int:category_id>/items/<int:item_id>/JSON`
 
-## Licence
-This code is licenced under [MIT licence](LICENCE).
+## License
+This code is licensed under [MIT license](LICENSE).
