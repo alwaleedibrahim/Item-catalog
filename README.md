@@ -1,7 +1,7 @@
 # Item Catalog
 
 ## Description
-This project is part of [https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd0044](Udacity Full Stack Developer Nanodegree.)
+This project is part of [Udacity Full Stack Developer Nanodegree.](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd0044)
 Item Catalog is a web application that provides a list of items within a variety of categories and integrate third party user registration and authentication. Authenticated users have the ability to post, edit, and delete their own items. 
 
 ## How to run
@@ -43,4 +43,4 @@ Visiting `http://localhost:8000` show all categories and latest items
 `http://localhost:8000//category/<int:category_id>/items/<int:item_id>/JSON`
 
 ## Licence
-This code is licenced under [MIT licence](licence).
+This code is licenced under [MIT licence](LICENCE).
