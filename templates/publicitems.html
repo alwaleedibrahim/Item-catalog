@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block content %}
+
+<h1>{{ category.name }}</h1>
+<figure>
+	<img width='100px'src="{{creator.picture}}">
+	<figcaption>Created By <b>{{ creator.name }}</b></figcaption>
+</figure>
+
+<div class='flash'>
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		<ul>
+			{% for message in messages %}
+				 <li> <strong> {{ message }} </strong> </li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endwith %}
+</div>
+
+<div>
+{% if items !=[] %}	
+	{% for i in items %}
+		<h3>{{i.name}}</h3>
+		<p><b>Description:</b>{{i.description}}</p>
+	{% endfor %}
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+{% block content %}
+
+<h1>{{ category.name }}</h1>
+<figure>
+	<img width='100px'src="{{creator.picture}}">
+	<figcaption>Created By <b>{{ creator.name }}</b></figcaption>
+</figure>
+
+<div class = 'flash'
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul>
+			{% for message in messages %}
+				<li> <strong> {{ message }} </strong> </li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+	{% endwith %}
+</div>
+
+
+	<a href="{{url_for('editCategory', category_id = category.id )}}">Edit Category</a> | 
+	<a href="{{url_for('newItem', category_id = category.id )}}">Add Item</a> | 
+	<a href="{{url_for('deleteCategory', category_id = category.id )}}">Delete Category</a>
+
+<div>
+{% if items !=[] %}	
+	{% for i in items %}
+		<h4>{{i.name}}</h4>
+		<p><b>Description:</b>{{i.description}}</p>
+		<a href='{{url_for("editItem", category_id = category.id, item_id=i.id ) }}'>Edit</a> | 
+		<a href='{{url_for("deleteItem", category_id = category.id, item_id=i.id ) }}'>Delete</a>
+	{% endfor %}
+{% endif %}
+</div>
+
+{% endblock %}
+
+
+

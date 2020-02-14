@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+
+
+
+<div class = 'flash'>
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for message in messages %}
+			<strong> {{ message }} </strong><br>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+</div>
+<div>
+<h1>Latest items</h1>
+<ul>
+{% for item in latestItems %}
+<li>
+{{item.name}} 
+(<a href="{{url_for('showItems', category_id = item.category_id)}}">
+{{item.category.name}}</a>)
+</li>
+{% endfor %}
+</ul>
+</div>	
+
+<div>
+<h1>All Categories</h1>
+<ul>
+{% for category in categories %}
+	<li>
+	<a href = "{{url_for('showItems', category_id = category.id)}}">
+	{{category.name}}
+	</a>
+	</li>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}

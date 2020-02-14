@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel='stylesheet' type='text/css' href="{{url_for('static', filename='styles.css')}}">
+	</head>
+	<body>
+		<header>
+			<span id='title'><a href="{{url_for('showCategories')}}">
+			Item catalog
+			</a></span> 
+			<span id='login'>
+			{% if 'username' not in session %}
+				<a href='{{url_for("showLogin")}}'>Login</a>
+				{% else %}
+				<a href='{{url_for("logout")}}'>Logout</a>
+			{% endif %}
+			</span>
+		</header>
+		<div>
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>
